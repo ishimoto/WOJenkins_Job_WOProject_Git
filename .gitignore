@@ -4,3 +4,5 @@ lastSuccessful
 nextBuildNumber
 workspace
 scm-polling.log
+
+.DS_Store
