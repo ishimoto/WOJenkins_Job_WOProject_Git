@@ -1,0 +1,9 @@
+Host github-WOdka
+  HostName github.com
+  User ishimoto
+  IdentityFile /Users/Shared/Jenkins/.ssh/id_rsa.WOdka
+
+Host github-SnoWOman
+  HostName github.com
+  User ishimoto
+  IdentityFile /Users/Shared/Jenkins/.ssh/id_rsa.SnoWOman
