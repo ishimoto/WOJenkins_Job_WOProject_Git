@@ -26,18 +26,18 @@ You can specify the version of Apple WebObjects™ to use, the repository and br
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
           <name>PROJECT_NAME</name>
-          <description>What is the name of the WOFramework or WOApplication project in the repository that you want to build?</description>
+          <description></description>
           <defaultValue>SimpleBlogLogic</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>DEPLOYED_APPLICATION_NAME</name>
-          <description>&lt;b&gt;**OPTIONAL**&lt;/b&gt; this setting allows you to specify a different name for an Application when it is built. Technically, it overrides the value in the project&apos;s build.properties file. If you leave it blank, it will simply use the PROJECT_NAME value, which should match the name in the build.properties file.</description>
+          <description></description>
           <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECT_GIT_REPOSITORY</name>
-          <description>The Git repository that holds the project you want to build.</description>
-          <defaultValue>https://github.com/daveeed/SimpleBlog.git</defaultValue>
+          <description></description>
+          <defaultValue>git@github-Nipponya:ishimoto/NipponYa.git</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECT_GIT_REFERENCE</name>
@@ -55,38 +55,21 @@ You can specify the version of Apple WebObjects™ to use, the repository and br
           </choices>
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
-          <name>WO_VERSION</name>
-          <description></description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>5.4.3</string>
-              <string>5.3.3</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>WONDER_GIT_REFERENCE</name>
-          <description>The Git branch or tag of Wonder that you want to build against. In Git terms it will be &quot;refs/WONDER_GIT_REFERENCE_TYPE/WONDER_GIT_REFERENCE&quot;. &lt;b&gt;master&lt;/b&gt; is the default, but valid options could be &lt;b&gt;*&lt;/b&gt; or &lt;b&gt;MyBranch&lt;/b&gt;</description>
-          <defaultValue>master</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.ChoiceParameterDefinition>
           <name>JAVA_COMPATIBILITY_VERSION</name>
           <description></description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>1.5</string>
               <string>1.6</string>
               <string>1.7</string>
-              <string>1.4</string>
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
-  <scm class="org.jenkinsci.plugins.multiplescms.MultiSCM">
+  <scm class="org.jenkinsci.plugins.multiplescms.MultiSCM" plugin="multiple-scms@0.2">
     <scms>
-      <hudson.plugins.git.GitSCM>
+      <hudson.plugins.git.GitSCM plugin="git@1.1.26">
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
@@ -100,6 +83,7 @@ You can specify the version of Apple WebObjects™ to use, the repository and br
             <name>origin/${PROJECT_GIT_REFERENCE}</name>
           </hudson.plugins.git.BranchSpec>
         </branches>
+        <disableSubmodules>false</disableSubmodules>
         <recursiveSubmodules>false</recursiveSubmodules>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
         <authorOrCommitter>false</authorOrCommitter>
@@ -107,24 +91,65 @@ You can specify the version of Apple WebObjects™ to use, the repository and br
         <wipeOutWorkspace>false</wipeOutWorkspace>
         <pruneBranches>false</pruneBranches>
         <remotePoll>false</remotePoll>
+        <ignoreNotifyCommit>false</ignoreNotifyCommit>
+        <useShallowClone>false</useShallowClone>
         <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
-        <gitTool>Default</gitTool>
+        <gitTool>Git 1.8.1</gitTool>
         <submoduleCfg class="list"/>
         <relativeTargetDir>Projects</relativeTargetDir>
+        <reference></reference>
         <excludedRegions></excludedRegions>
         <excludedUsers></excludedUsers>
         <gitConfigName></gitConfigName>
         <gitConfigEmail></gitConfigEmail>
         <skipTag>false</skipTag>
+        <includedRegions></includedRegions>
         <scmName>Project</scmName>
       </hudson.plugins.git.GitSCM>
-      <hudson.plugins.git.GitSCM>
+      <hudson.plugins.git.GitSCM plugin="git@1.1.26">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <name></name>
+            <refspec></refspec>
+            <url>git@github-SnoWOman:ishimoto/SnoWOman.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>**</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <disableSubmodules>false</disableSubmodules>
+        <recursiveSubmodules>false</recursiveSubmodules>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <authorOrCommitter>false</authorOrCommitter>
+        <clean>false</clean>
+        <wipeOutWorkspace>false</wipeOutWorkspace>
+        <pruneBranches>false</pruneBranches>
+        <remotePoll>false</remotePoll>
+        <ignoreNotifyCommit>false</ignoreNotifyCommit>
+        <useShallowClone>false</useShallowClone>
+        <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
+        <gitTool>Git 1.8.1</gitTool>
+        <submoduleCfg class="list"/>
+        <relativeTargetDir>SnoWOman</relativeTargetDir>
+        <reference></reference>
+        <excludedRegions></excludedRegions>
+        <excludedUsers></excludedUsers>
+        <gitConfigName></gitConfigName>
+        <gitConfigEmail></gitConfigEmail>
+        <skipTag>false</skipTag>
+        <includedRegions></includedRegions>
+        <scmName></scmName>
+      </hudson.plugins.git.GitSCM>
+      <hudson.plugins.git.GitSCM plugin="git@1.1.26">
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
             <name>origin</name>
-            <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
-            <url>https://github.com/avendasora/WOJenkins.git</url>
+            <refspec></refspec>
+            <url>https://github.com/ishimoto/WOJenkins.git</url>
           </hudson.plugins.git.UserRemoteConfig>
         </userRemoteConfigs>
         <branches>
@@ -132,22 +157,27 @@ You can specify the version of Apple WebObjects™ to use, the repository and br
             <name>master</name>
           </hudson.plugins.git.BranchSpec>
         </branches>
+        <disableSubmodules>false</disableSubmodules>
         <recursiveSubmodules>false</recursiveSubmodules>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-        <authorOrCommitter>false</authorOrCommitter>
-        <clean>false</clean>
+        <authorOrCommitter>true</authorOrCommitter>
+        <clean>true</clean>
         <wipeOutWorkspace>false</wipeOutWorkspace>
-        <pruneBranches>false</pruneBranches>
+        <pruneBranches>true</pruneBranches>
         <remotePoll>false</remotePoll>
+        <ignoreNotifyCommit>false</ignoreNotifyCommit>
+        <useShallowClone>false</useShallowClone>
         <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
-        <gitTool>Default</gitTool>
+        <gitTool>Git 1.8.1</gitTool>
         <submoduleCfg class="list"/>
         <relativeTargetDir>WOJenkins</relativeTargetDir>
+        <reference></reference>
         <excludedRegions></excludedRegions>
         <excludedUsers></excludedUsers>
         <gitConfigName></gitConfigName>
         <gitConfigEmail></gitConfigEmail>
         <skipTag>false</skipTag>
+        <includedRegions></includedRegions>
         <scmName>WOJenkins</scmName>
       </hudson.plugins.git.GitSCM>
     </scms>
@@ -160,12 +190,71 @@ You can specify the version of Apple WebObjects™ to use, the repository and br
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>${WORKSPACE}/WOJenkins/Build/Wonder/WorkspaceSetupScripts/Git/setupWonderWorkspace.sh</command>
+      <command>${WORKSPACE}/WOJenkins/Build/WOdkaProjects/setupWOdkaAppWorkspace.sh</command>
     </hudson.tasks.Shell>
-    <hudson.tasks.Ant>
-      <targets>build -verbose -propertyfile ${WORKSPACE}/Root/hudson.build.properties -lib ${WORKSPACE}/Root/lib/woproject.jar</targets>
-      <buildFile>Projects/${PROJECT_NAME}/build.xml</buildFile>
-      <properties>Projects/${PROJECT_NAME}/</properties>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/SnoWOman/WOJapan/wodkabuild.xml
+clean.install install</targets>
+      <antName>(Default)</antName>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/SnoWOman/ERModernJQueryAddon/wodkabuild.xml
+clean.install install</targets>
+      <antName>(Default)</antName>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/SnoWOman/WOJquery/wodkabuild.xml
+clean.install install</targets>
+      <antName>(Default)</antName>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/SnoWOman/SKIN_Sandvox/wodkabuild.xml
+clean.install install</targets>
+      <antName>(Default)</antName>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/SnoWOman/SnoWOman/wodkabuild.xml
+clean.install install</targets>
+      <antName>(Default)</antName>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/Projects/SKIN_Nipponya/wodkabuild.xml
+clean.install install</targets>
+      <antName>(Default)</antName>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/Projects/SKIN_ChaNoMa/wodkabuild.xml
+clean.install install</targets>
+      <antName>(Default)</antName>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/Projects/WOMRBilling/wodkabuild.xml
+clean.install install</targets>
+      <antName>(Default)</antName>
+    </hudson.tasks.Ant>
+    <hudson.tasks.Ant plugin="ant@1.1">
+      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
+-lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
+-buildfile ${WORKSPACE}/Projects/Nipponya/wodkabuild.xml
+clean build
+</targets>
+      <antName>(Default)</antName>
     </hudson.tasks.Ant>
   </builders>
   <publishers>
