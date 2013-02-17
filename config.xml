@@ -1,19 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>&lt;p&gt;This project will build WebObjects projects (both Frameworks and Applications) that are based on Project Wonder. &#xd;
-You can specify the version of Apple WebObjects™ to use, the repository and branch for your project and the repository and branch&#xd;
-  for Project Wonder.&lt;/p&gt; &#xd;
+  <description>&lt;p&gt;This project will build WebObjects projects (both Frameworks and Applications) that are based on Project Wonder and WOdka. &lt;/p&gt;&#xd;
+&#xd;
+&lt;p&gt;Apple WebObjects™ 5.4.3 and Prpject Wonder &apos;integration&apos; branch will be used. &#xd;
+  You have only to set your repository and branch of your project.&lt;/p&gt; &#xd;
   &#xd;
 &lt;p&gt;You can also specify you want a &lt;b&gt;Test Build&lt;/b&gt; (no embedded frameworks) or a &lt;b&gt;Deployment Build&lt;/b&gt; (fully &#xd;
   embedded WebObjects and Project Wonder Frameworks)&#xd;
 &#xd;
 &lt;p&gt;You can use this project as a template for your own projects, or simply specify the parameters at runtime.&#xd;
   &#xd;
-  &lt;p&gt;&lt;b&gt;NOTE:&lt;/b&gt; this project is meant to work in tandem with the &#xd;
-    &lt;a href=&quot;https://github.com/avendasora/WOJenkins_Job_InstallWOAndWOnder&quot;&gt;InstallWOAndWOnder&lt;/a&gt; Jenkins job. &#xd;
-    That job will take care of downloading and installing WebObjects™ and cloning, building and installing Project WOnder&#xd;
-    so that they are available for this job to use.</description>
+&lt;p&gt;&lt;b&gt;NOTE:&lt;/b&gt; this project is meant to work together with the &#xd;
+  &lt;a href=&quot;https://github.com/ishimoto/WOJenkins_Job_InstallWOdka.git&quot;&gt;InstallWOAndWOnder&lt;/a&gt; and&#xd;
+  &lt;a href=&quot;https://github.com/ishimoto/WOJenkins_Job_InstallWOdka.git&quot;&gt;InstallWOdka&lt;/a&gt; Jenkins job. &#xd;
+  That jobs will take care of downloading and installing WebObjects™ and cloning, building and installing Project WOnder and WOdka&#xd;
+    so that they are available for this job to use.&#xd;
+  &#xd;
+  &lt;hr /&gt;&#xd;
+  version 2013/02/17 by Ken Ishimoto</description>
   <logRotator>
     <daysToKeep>-1</daysToKeep>
     <numToKeep>3</numToKeep>
@@ -24,16 +29,6 @@ You can specify the version of Apple WebObjects™ to use, the repository and br
   <properties>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
-        <hudson.model.StringParameterDefinition>
-          <name>PROJECT_NAME</name>
-          <description></description>
-          <defaultValue>SimpleBlogLogic</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>DEPLOYED_APPLICATION_NAME</name>
-          <description></description>
-          <defaultValue></defaultValue>
-        </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>PROJECT_GIT_REPOSITORY</name>
           <description></description>
