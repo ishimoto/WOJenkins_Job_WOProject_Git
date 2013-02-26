@@ -190,57 +190,50 @@
     <hudson.tasks.Ant plugin="ant@1.1">
       <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
 -lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
--buildfile ${WORKSPACE}/SnoWOman/WOJapan/wodkabuild.xml
-clean.install install</targets>
-      <antName>(Default)</antName>
-    </hudson.tasks.Ant>
-    <hudson.tasks.Ant plugin="ant@1.1">
-      <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
--lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
 -buildfile ${WORKSPACE}/SnoWOman/ERModernJQueryAddon/wodkabuild.xml
-clean.install install</targets>
+clean clean.install install</targets>
       <antName>(Default)</antName>
     </hudson.tasks.Ant>
     <hudson.tasks.Ant plugin="ant@1.1">
       <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
 -lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
 -buildfile ${WORKSPACE}/SnoWOman/WOJquery/wodkabuild.xml
-clean.install install</targets>
+clean clean.install install</targets>
       <antName>(Default)</antName>
     </hudson.tasks.Ant>
     <hudson.tasks.Ant plugin="ant@1.1">
       <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
 -lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
 -buildfile ${WORKSPACE}/SnoWOman/SKIN_Sandvox/wodkabuild.xml
-clean.install install</targets>
+clean clean.install install</targets>
       <antName>(Default)</antName>
     </hudson.tasks.Ant>
     <hudson.tasks.Ant plugin="ant@1.1">
       <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
 -lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
 -buildfile ${WORKSPACE}/SnoWOman/SnoWOman/wodkabuild.xml
-clean.install install</targets>
+clean clean.install install</targets>
       <antName>(Default)</antName>
     </hudson.tasks.Ant>
     <hudson.tasks.Ant plugin="ant@1.1">
       <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
 -lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
 -buildfile ${WORKSPACE}/Projects/SKIN_Nipponya/wodkabuild.xml
-clean.install install</targets>
+clean clean.install install</targets>
       <antName>(Default)</antName>
     </hudson.tasks.Ant>
     <hudson.tasks.Ant plugin="ant@1.1">
       <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
 -lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
 -buildfile ${WORKSPACE}/Projects/SKIN_ChaNoMa/wodkabuild.xml
-clean.install install</targets>
+clean clean.install install</targets>
       <antName>(Default)</antName>
     </hudson.tasks.Ant>
     <hudson.tasks.Ant plugin="ant@1.1">
       <targets>-propertyfile ${WORKSPACE}/Root/jenkins.build.properties
 -lib ${WORKSPACE}/WonderExtensionLaboratory/WOdkaTemplates/Templates/woproject.jar
 -buildfile ${WORKSPACE}/Projects/WOMRBilling/wodkabuild.xml
-clean.install install</targets>
+clean clean.install install</targets>
       <antName>(Default)</antName>
     </hudson.tasks.Ant>
     <hudson.tasks.Ant plugin="ant@1.1">
