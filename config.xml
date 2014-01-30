@@ -3,7 +3,7 @@
   <actions/>
   <description>&lt;p&gt;This project will build WebObjects projects (both Frameworks and Applications) that are based on Project Wonder and WOdka. &lt;/p&gt;&#xd;
 &#xd;
-&lt;p&gt;Apple WebObjects™ 5.4.3 and Prpject Wonder &apos;integration&apos; branch will be used. &#xd;
+&lt;p&gt;Apple WebObjects™ 5.4.3 and Prpject Wonder &apos;master&apos; branch will be used. &#xd;
   You have only to set your repository and branch of your project.&lt;/p&gt; &#xd;
   &#xd;
 &lt;p&gt;You can also specify you want a &lt;b&gt;Test Build&lt;/b&gt; (no embedded frameworks) or a &lt;b&gt;Deployment Build&lt;/b&gt; (fully &#xd;
